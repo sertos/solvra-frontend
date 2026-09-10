@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #2DD4BF;
+  --color-background-light: #F8FAFC;
+  --color-background-dark: #0F172A;
+  --color-slate-grey: #1E293B;
+  --font-display: 'Outfit', sans-serif;
+  --font-sans: 'Inter', sans-serif;
+}
+
+@layer utilities {
+    .swiss-grid {
+        background-image: radial-gradient(circle at 1px 1px, rgba(45, 212, 191, 0.05) 1px, transparent 0);
+        background-size: 40px 40px;
+    }
+    .dark .swiss-grid {
+        background-image: radial-gradient(circle at 1px 1px, rgba(45, 212, 191, 0.1) 1px, transparent 0);
+    }
+}
+
+.animated-gradient-text {
+  background: linear-gradient(
+    90deg,
+    #5EF2E3,
+    #00D4FF,
+    #5EF2E3
+  );
+
+  background-size: 300% auto;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: gradientFlow 4s linear infinite;
+}
+
+@keyframes gradientFlow {
+  from {
+    background-position: 0%;
+  }
+
+  to {
+    background-position: 300%;
+  }
+}
